@@ -21,9 +21,11 @@ export async function POST(req) {
         5. Extra unnecessary baatein mat likho, sirf kaam ki cheezein btao.
         6. Format aur readability acchi honi chahiye taki samajhne me easy ho. 
         
-        Bhai ekdum mast aur engaging style me likhna! 🎯`;
+        Bhai ekdum mast aur engaging style me likhna! aur last me ek accha sa pdf bana ke dena jo formated way me ho 🎯`;
         const result = await model.generateContent(prompt);
         const responseText = await result.response.text();
+
+        
         return Response.json({ career: responseText }, { status: 200 });
     } catch (error) {
         return Response.json({ error: error.message }, { status: 500 });

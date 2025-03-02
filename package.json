@@ -14,6 +14,7 @@
     "generative-ai": "^0.1.4",
     "mongoose": "^8.11.0",
     "next": "15.2.0",
+    "pdfkit": "^0.16.0",
     "postcss": "^8.5.3",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
