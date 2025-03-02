@@ -25,7 +25,6 @@ export default function Home() {
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ Intrest: interest }),
             });
-
             const data = await res.json();
             if (res.ok) {
                 setCareerIdea(data.career);
@@ -54,7 +53,7 @@ export default function Home() {
                         <input
                             type="text"
                             className="w-full p-3 pl-12 bg-white/20 border border-white/30 rounded-lg text-white placeholder-gray-300 focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                            placeholder="Apka interest kya hai? (e.g., Coding, Music, Design...)"
+                            placeholder="Enter your intrest (e.g., Coding, Music, Design...)"
                             value={interest}
                             onChange={(e) => setInterest(e.target.value)}
                         />
@@ -66,7 +65,7 @@ export default function Home() {
                         disabled={loading}
                         className="mt-4 w-full px-4 py-3 text-lg font-medium bg-blue-500 hover:bg-blue-600 transition rounded-lg disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                        {loading ? "⏳ Soch raha hai..." : "🔍 Career Idea Nikalo!"}
+                        {loading ? "⏳ Processing..." : "🔍 Get Idea.."}
                     </button>
                 </form>
 
